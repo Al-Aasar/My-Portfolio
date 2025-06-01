@@ -167,7 +167,7 @@
           </li>
 
           <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
+            <button class="navbar-link" data-nav-link>Projects</button>
           </li>
 
           <!-- <li class="navbar-item">
@@ -275,7 +275,7 @@
             <li class="service-item">
 
               <div class="service-icon-box">
-                <img src="./assets/images/deep Learning.png" alt="deep Learning icon" width="80">
+                <img src="./assets/images/Deep Learning.png" alt="deep Learning icon" width="80">
               </div>
 
               <div class="service-content-box">
@@ -748,7 +748,7 @@
         - #PORTFOLIO-------------------------------------------------------------------------------------------------------
       -->
 
-      <article class="portfolio" data-page="portfolio">
+      <article class="portfolio" data-page="projects">
 
         <header>
           <h2 class="h2 article-title">My Projects</h2>
@@ -848,7 +848,7 @@
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
 
-                  <img src="./assets/images/movie.png" alt="Movie review classifier" loading="lazy">
+                  <img src="./assets/images/Movie.png" alt="Movie review classifier" loading="lazy">
                 </figure>
 
                 <h3 class="project-title">Movie review classifier</h3>
@@ -1525,6 +1525,9 @@
   });
 </script>
 
+
+
+
 <!-- CV -->
 <div id="pdfModal" class="pdf-modal">
   <div class="pdf-modal-content">
@@ -1663,7 +1666,7 @@
     color: hsl(0, 0%, 0%);
   }
 
-  @media (max-width: 768px) {
+  @media (min-width: 601px) and (max-width: 1024px) {
     .pdf-modal-content {
       width: 95%;
       height: 95%;
@@ -1700,6 +1703,57 @@
       font-size: 13px;
     }
   }
+
+
+  @media (max-width: 600px) {
+      .pdf-modal-content {
+          width: 95%;
+          height: 95%;
+          top: 2.5%;
+          padding: 15px;
+        }
+
+        #pdf-canvas {
+          display: block;
+          max-width: 100%;
+          max-height: 100%;
+          margin: auto;
+          height: 90% !important;
+          border-radius: 8px;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+      
+        .download-cv-btn {
+          padding: 10px 20px;
+          font-size: 14px;
+        }
+      
+        .pdf-close {
+          right: 10px;
+          top: 2px;
+          font-size: 24px;
+        }
+      
+        .nav-arrow {
+          width: 28px;
+          height: 28px;
+          font-size: 23px;
+        }
+      
+          .nav-arrow.left {
+        left: 0px;
+      }
+    
+      .nav-arrow.right {
+        right: 0px;
+      }
+    
+        .page-info-wrapper {
+          font-size: 13px;
+        }
+  }
+
+
 </style>
 
 <!-- ===== JavaScript ===== -->
@@ -1768,6 +1822,9 @@
     }
   });
 </script>
+
+
+
 
 <!-- ===== Footer ===== -->
 <footer class="site-footer">
