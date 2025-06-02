@@ -898,6 +898,25 @@
             </li>
 
 
+            <li class="project-item  active" data-filter-item data-category="data analysis">
+              <a class="eye-icon_3">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline" ></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/World Data Analysis.png" alt="World Data Analysis" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">World Data Analysis</h3>
+
+                <p class="project-category">Data Analysis</p>
+
+              </a>
+            </li>
+
+
 
 
             <!-- <li class="project-item  active" data-filter-item data-category="applications">
@@ -1503,6 +1522,115 @@
 
     // Event listeners for all eye icons
     document.querySelectorAll('.eye-icon_2').forEach(function(btn) {
+      btn.addEventListener('click', openModal);
+    });
+
+    // Close button event
+    closeBtn.addEventListener('click', closeModal);
+
+    // Close when clicking outside video
+    window.addEventListener('click', function(event) {
+      if (event.target === videoModal) {
+        closeModal();
+      }
+    });
+
+    // Close with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && videoModal.style.display === 'flex') {
+        closeModal();
+      }
+    });
+  });
+</script>
+
+<!-- Video Popup Modal World Data Analysis -->
+<div id="videoModal_3" class="modal_3">
+  <div class="modal-content_3">
+    <span class="close-btn_3">&times;</span>
+    <video id="popupVideo_3" controls>
+      <source src="./assets/Videos/World Data Analysis.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<style>
+  /* Modal styles */
+  .modal_3 {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content_3 {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .modal-content_3 video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .close-btn_3 {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .close-btn_3:hover {
+    color: #ccc;
+  }
+  
+  @media (max-width: 768px) {
+    .modal-content_3 {
+      width: 95%;
+    }
+    
+    .close-btn_3 {
+      top: -35px;
+      right: -10px;
+      font-size: 25px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const videoModal = document.getElementById('videoModal_3');
+    const video = document.getElementById('popupVideo_3');
+    const closeBtn = document.querySelector('.close-btn_3');
+
+    // Function to open modal
+    function openModal() {
+      videoModal.style.display = 'flex';
+      video.play();
+    }
+
+    // Function to close modal
+    function closeModal() {
+      video.pause();
+      video.currentTime = 0;
+      videoModal.style.display = 'none';
+    }
+
+    // Event listeners for all eye icons
+    document.querySelectorAll('.eye-icon_3').forEach(function(btn) {
       btn.addEventListener('click', openModal);
     });
 
